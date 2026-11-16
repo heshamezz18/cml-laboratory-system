@@ -1,0 +1,1 @@
+import './globals.css';export const metadata={title:'Colors Laboratory Workspace',description:'Laboratory operations, samples and partner collaboration'};export default function Layout({children}:any){return <html lang="en"><body>{children}</body></html>}
