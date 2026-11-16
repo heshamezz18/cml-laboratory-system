@@ -1,6 +1,12 @@
 # CML Laboratory System
 
-Private source repository for Colors Medical Laboratories’ bilingual operations workspace.
+Public source repository for Colors Medical Laboratories’ bilingual operations workspace.
+
+## GitHub Pages demo
+
+A standalone portfolio demo is published from `docs/` on GitHub Pages. It uses fictional records, runs without login or a backend, and keeps edits in memory until reload. PDF uploads and real access management are disabled. It must not be used for real patient data.
+
+The editable demo source is in `demo/`. To rebuild: run `npm ci` inside `demo/`, then `npx esbuild main.tsx --bundle --minify --jsx=automatic --define:process.env.NODE_ENV=\'"production"\' --outfile=../docs/app.js`. Commit the rebuilt `docs/` assets to update the demo.
 
 ## Current features
 - Arabic/English switch with persistent preference and RTL layout.
@@ -16,7 +22,7 @@ React and TypeScript on Vinext/Vite, with Cloudflare D1 for records and R2 for d
 ## Next milestones
 1. Replace platform authentication with CML-owned accounts and sessions.
 2. Migrate storage and server runtime for an independent hosted preview.
-3. Configure Vercel only after the runtime and storage migration is tested.
+3. Keep GitHub Pages for the public portfolio demo; production hosting is a separate decision.
 4. Package a Windows application connected to the laboratory LAN server.
 
 See [DESKTOP_TRANSITION.md](DESKTOP_TRANSITION.md) for the internal deployment target and [DEVELOPMENT.md](DEVELOPMENT.md) for current development setup.
